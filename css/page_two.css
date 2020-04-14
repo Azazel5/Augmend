@@ -1,0 +1,222 @@
+.list_container {
+    margin-top: 4.5%;
+    width: 45%;
+    float: left;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.model_container {
+    position: relative;
+    margin-top:1.5%;
+    height: 83vh;
+    width: 55%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.model_container .viewer {
+    display:inline-block;
+    height:95%;
+    width:95%;
+    
+}
+
+.model_container .viewer:focus {
+    outline:0;
+}
+
+/* New Stuff */
+.model_container .underlined {
+  color: black;
+  flex: 1;
+  font-size: 1.3em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+}
+.underlined:hover {
+  background-size: 100% 100%;
+}
+.model_container .underlined--thin {
+  background-image: linear-gradient(to right, black 0, black 100%);
+}
+
+
+/* New stuff ends */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+    margin-top: 6vh;
+    text-align:center;
+}
+
+.centerer {
+    width: 60%;
+    margin-right:1%;
+    display:inline-block;
+}
+
+.chosen-value, .value-list {
+  width: 100%;
+}
+
+
+.centerer .chosen-value {
+  font-family: 'Ek Mukta';
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+  height: 4rem;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: #fafcfd;
+  border: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.chosen-value::-webkit-input-placeholder {
+  color: #333;
+}
+.chosen-value:hover {
+  background-color: #ff908b;
+  cursor: pointer;
+}
+.chosen-value:hover::-webkit-input-placeholder {
+  color: #333;
+}
+.chosen-value:focus, .chosen-value.open {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  background-color: #ff908b;
+  color: #000;
+}
+.chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
+  color: #000;
+}
+
+.centerer .value-list {
+  list-style: none;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-height: 0;
+  color:black;
+  transition: 0.3s ease-in-out;
+}
+.value-list.open {
+  max-height: 320px;
+  overflow: auto;
+}
+.value-list li {
+  position: relative;
+  height: 4rem;
+  background-color: #fafcfd;
+  padding: 1rem;
+  font-size:17px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  opacity: 1;
+}
+
+
+.value-list li:hover {
+  background-color: #ff908b;
+}
+
+#icon_setter {
+    width:28px;
+    display:inline-block;
+}
+
+
+.value-list li.closed {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+
+
+
+/* New STUFF */
+
+
+.list_container .tab_layout {
+  text-align:center;
+  width:100%;
+}
+
+.tab_layout .tabs{
+  font-size:15px;
+  padding:0px;
+  list-style:none;
+  background:#fff;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  display:inline-block;
+  border-radius:50px;
+  position:relative;
+}
+
+.tabs {
+    cursor:pointer;
+    color: #424242;
+
+}
+
+.tabs a{
+  text-decoration:none;
+  text-transform:uppercase;
+  padding: 5px 12px;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+}
+
+.tabs .active{
+  color:#fff;
+}
+
+.tabs a i{
+  margin-right:5px;
+
+}
+
+.tabs .selector{
+  height:100%;
+  display:inline-block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:1;
+  border-radius:50px;
+  transition-duration:0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  background: #05abe0;
+  background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+}
+
+
+
+
